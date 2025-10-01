@@ -148,8 +148,9 @@ $(function () {
             , loop: true
             , dots: true
             , margin: 0
-            , autoplay: false
-            , autoplayTimeout: 5000
+            , autoplay: true
+            , autoplayTimeout: 2000
+            , smartSpeed: 1000
             , animateOut: 'fadeOut'
             , nav: true
             , navText: ['<i class="fa-light fa-angle-left" aria-hidden="true"></i>', '<i class="fa-light fa-angle-right" aria-hidden="true"></i>']

@@ -1014,15 +1014,18 @@ blockquote cite:before {
 .section-padding {
     padding: 60px 0;
 }
+.item p{
+    text-align: justify;
+}
 .section-title {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 32px;
     line-height: 50px;
     color: #fff;
     position: relative;
     margin-bottom: 28px;
     text-transform: uppercase;
-    letter-spacing: 6px;
+    letter-spacing: 3px;
 }
 .tabs-content .mb-25{
     font-size: 20px;
@@ -1033,6 +1036,10 @@ blockquote cite:before {
 }
 .section-title.white {
     color: #fff;
+}
+
+.amenities .item .cont.up img{
+    width: 86px;
 }
 .section-subtitle {
    
@@ -3565,7 +3572,7 @@ display: -webkit-box;
     will-change: transform;
     -webkit-transform: translateY(30px);
     transform: translateY(5px);
-    height: 174px;
+    height: 184px;
 }
 .amenities .item .cont.up .text-visible {
     opacity: 0;
