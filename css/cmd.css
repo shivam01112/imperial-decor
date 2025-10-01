@@ -1,0 +1,132 @@
+/* CMD Page Styles */
+.cmd-message-page {
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+.cmd-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cmd-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(170, 132, 83, 0.1);
+    pointer-events: none;
+}
+
+.cmd-intro {
+    padding-left: 30px;
+}
+
+.cmd-name {
+    color: #AA8453;
+    font-size: 28px;
+    margin: 15px 0;
+    font-family: 'Gilda Display', serif;
+}
+
+.cmd-credentials {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.signature {
+    max-width: 200px;
+}
+
+.cmd-quote {
+    position: relative;
+    padding: 40px 60px;
+    margin: 30px 0;
+    border-left: 3px solid #AA8453;
+    background: rgba(170, 132, 83, 0.05);
+}
+
+.cmd-quote i {
+    color: #AA8453;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.cmd-quote p {
+    font-size: 24px;
+    font-style: italic;
+    font-family: 'Gilda Display', serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cmd-message p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.milestone-box {
+    text-align: center;
+    padding: 30px;
+    background: rgba(170, 132, 83, 0.05);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.milestone-box:hover {
+    transform: translateY(-5px);
+    background: rgba(170, 132, 83, 0.1);
+}
+
+.milestone-box i {
+    color: #AA8453;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.milestone-box h4 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Gilda Display', serif;
+}
+
+.milestone-box p {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .cmd-intro {
+        padding-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .signature {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .milestone-box {
+        margin-bottom: 30px;
+    }
+    
+    .cmd-quote {
+        padding: 30px;
+    }
+    
+    .cmd-quote p {
+        font-size: 20px;
+    }
+}

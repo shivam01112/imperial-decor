@@ -1,0 +1,176 @@
+/* Manufacturing Process Section Styles */
+.process-box {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.process-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 55px rgba(170, 132, 83, 0.2);
+}
+.make-india-feature .list{
+    padding: 0px;
+}
+.process-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #AA8453;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+}
+
+.process-box:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.process-icon {
+    position: relative;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.process-icon i {
+    font-size: 48px;
+    color: #AA8453;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.process-box:hover .process-icon i {
+    transform: rotateY(360deg);
+}
+
+.process-number {
+    position: absolute;
+    right: -20px;
+    top: -10px;
+    font-size: 60px;
+    font-weight: 600;
+    color: rgba(170, 132, 83, 0.1);
+    transition: all 0.3s ease;
+}
+
+.process-box:hover .process-number {
+    color: rgba(170, 132, 83, 0.2);
+    transform: scale(1.2);
+}
+
+.process-box h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.process-box h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #AA8453;
+}
+
+.process-box .list {
+    margin-bottom: 25px;
+}
+
+.process-box .list li {
+    margin-bottom: 15px;
+}
+
+.process-box .list-icon i {
+    color: #AA8453;
+    font-size: 14px;
+}
+
+.process-stat {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.process-stat .count {
+    font-size: 36px;
+    font-weight: 600;
+    color: #AA8453;
+    margin-right: 5px;
+}
+
+.process-stat p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* Manufacturing Overview Section */
+.manufacture-overview {
+    position: relative;
+    padding: 100px 0;
+    background: #f8f8f8;
+}
+
+.manufacture-overview:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pattern.png') repeat;
+    opacity: 0.03;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 991px) {
+    .process-box {
+        margin-bottom: 30px;
+    }
+    
+    .process-box h4 {
+        font-size: 20px;
+    }
+    
+    .process-icon i {
+        font-size: 40px;
+    }
+    
+    .process-number {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .process-box {
+        padding: 30px 20px;
+    }
+    
+    .process-stat .count {
+        font-size: 30px;
+    }
+}
+
+.gallery-detail{
+    margin-top: 20px;
+}
+
+.gallery-detail h4{
+    font-size: 20px;
+    margin-bottom: 0px;
+}

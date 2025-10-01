@@ -1,0 +1,233 @@
+/* Gallery Page Styles */
+.gallery-page-section {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.gallery-page-section .section-title {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.gallery-page-section .section-subtitle {
+    color: #AA8453;
+}
+
+/* Gallery Filter */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.gallery-filter-btn {
+    padding: 10px 25px;
+    background: #222;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.gallery-filter-btn:hover,
+.gallery-filter-btn.active {
+    background: #AA8453;
+    border-color: #AA8453;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 991px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Gallery Item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Gallery Item Info */
+.gallery-item-info {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.gallery-item:hover .gallery-item-info {
+    bottom: 0;
+}
+
+.gallery-item-title {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.1s;
+}
+
+.gallery-item:hover .gallery-item-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item-category {
+    color: #AA8453;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.2s;
+}
+
+.gallery-item:hover .gallery-item-category {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gallery Item Click */
+.gallery-item {
+    cursor: zoom-in;
+}
+
+/* Custom Popup Styling */
+.mfp-container {
+    padding: 0 30px;
+}
+
+.mfp-figure {
+    padding: 0;
+    background: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.mfp-figure:after {
+    display: none;
+}
+
+.mfp-img {
+    padding: 0;
+    max-height: 80vh !important;
+    width: auto;
+    height: auto;
+}
+
+.mfp-title {
+    color: #fff;
+    padding: 20px;
+    background: #1b1b1b;
+    font-size: 18px;
+}
+
+.mfp-close {
+    color: #AA8453 !important;
+    opacity: 1;
+}
+
+.mfp-close:hover {
+    color: #fff !important;
+}
+
+/* Lightbox Customization */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.9;
+    background: #000;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Loading Animation */
+.gallery-loading {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 3px solid #AA8453;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

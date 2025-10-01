@@ -1,0 +1,172 @@
+/* Career Page Styles */
+.career-page-design {
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+.career-content {
+    position: relative;
+}
+
+.career-content .section-title {
+    color: #fff;
+}
+
+.career-content .section-subtitle {
+    color: #AA8453;
+}
+
+.career-content p {
+    color: #999;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.career-benefits {
+    margin-top: 30px;
+}
+
+.career-benefits li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #999;
+}
+
+.career-benefits li i {
+    color: #AA8453;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.career-image {
+    position: relative;
+}
+
+.career-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Career Form Styles */
+.career-form-wrapper {
+    background: #222;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.career-form-wrapper .section-title {
+    color: #fff;
+}
+
+.career-form-wrapper .section-subtitle {
+    color: #AA8453;
+}
+
+.career-form .form-group {
+    margin-bottom: 20px;
+}
+
+.career-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.career-form .form-control,
+.career-form .form-select {
+    height: 50px;
+    padding: 10px 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    font-size: 15px;
+    color: #fff;
+    background-color: rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+
+.career-form .form-control::placeholder {
+    color: #666;
+}
+
+.career-form .form-control:focus,
+.career-form .form-select:focus {
+    border-color: #AA8453;
+    box-shadow: 0 0 0 0.2rem rgba(170, 132, 83, 0.15);
+    background-color: rgba(255,255,255,0.08);
+}
+
+.career-form .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+
+.career-form .form-select option {
+    background-color: #222;
+    color: #fff;
+}
+
+.custom-file-upload {
+    position: relative;
+}
+
+.custom-file-upload input[type="file"] {
+    padding: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.custom-file-upload .form-text {
+    margin-top: 8px;
+    display: block;
+    color: #666;
+}
+
+.career-form button[type="submit"] {
+    padding: 15px 40px;
+    font-size: 16px;
+    background-color: #AA8453;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.career-form button[type="submit"]:hover {
+    background-color: #8b6c44;
+}
+
+.career-form button[type="submit"] i {
+    margin-left: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .career-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .career-form-wrapper {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .career-benefits li {
+        font-size: 15px;
+    }
+    
+    .career-form-wrapper {
+        padding: 20px;
+    }
+}

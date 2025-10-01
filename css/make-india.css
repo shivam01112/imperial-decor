@@ -1,0 +1,200 @@
+/* Make in India Page Styles */
+.make-india-section {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.make-india-hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.make-india-logo {
+    width: 150px;
+    margin-bottom: 30px;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.tricolor-line {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #FF9933 33.33%, #ffffff 33.33%, #ffffff 66.66%, #138808 66.66%);
+    margin: 30px 0;
+}
+
+.made-india-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(170, 132, 83, 0.1);
+    border: 1px solid #AA8453;
+    border-radius: 50px;
+    margin: 20px 0;
+}
+
+.made-india-badge i {
+    color: #AA8453;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+/* Feature Boxes */
+.make-india-feature {
+    background: #222;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.make-india-feature:hover {
+    transform: translateY(-5px);
+    border-color: #AA8453;
+}
+
+.feature-icon {
+    color: #AA8453;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Gilda Display', serif;
+}
+
+.feature-text {
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.make-india-feature::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #FF9933 33.33%, #ffffff 33.33%, #ffffff 66.66%, #138808 66.66%);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.make-india-feature:hover::after {
+    transform: scaleX(1);
+}
+
+/* Statistics Section */
+.make-india-stats {
+    background: #222;
+    border-radius: 15px;
+    padding: 60px 40px;
+    margin: 80px 0;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-number {
+    color: #AA8453;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Gilda Display', serif;
+}
+
+.stat-label {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Letter Section */
+.ceo-letter {
+    background: #222;
+    border-radius: 15px;
+    padding: 50px;
+    margin-top: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+}
+
+.quote-mark {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: rgba(170, 132, 83, 0.1);
+    font-size: 120px;
+    font-family: serif;
+    line-height: 1;
+}
+
+.letter-content {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #999;
+}
+
+.letter-signature {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.signature-name {
+    color: #AA8453;
+    font-size: 24px;
+    font-family: 'Gilda Display', serif;
+    margin-bottom: 5px;
+}
+
+.signature-title {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .make-india-feature {
+        padding: 30px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    .ceo-letter {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .make-india-logo {
+        width: 120px;
+    }
+    
+    .feature-title {
+        font-size: 20px;
+    }
+    
+    .stat-number {
+        font-size: 32px;
+    }
+}
