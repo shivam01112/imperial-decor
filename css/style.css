@@ -1279,7 +1279,7 @@ blockquote cite:before {
 }
 /* logo */
 .nav-scroll .logo-wrapper .logo-img {
-     width: 152px;
+     width: 190px;
     text-align: center;
     padding: 8px 0px;
 }
@@ -1302,7 +1302,7 @@ blockquote cite:before {
     padding: 0;
 }
 .logo-wrapper .logo-img {
-    width: 170px;
+    width: 190px;
     text-align: center;
 }
 .logo-wrapper .logo h2 {
@@ -5036,12 +5036,12 @@ body.mfp-zoom-out-cur {
     background-color: #1b1b1b;
     transform: rotateY(180deg);
 }
-.contact .item:hover .front {
-    transform: rotateY(-180deg);
+/* .contact .item:hover .front {
+    transform: rotateY(0deg);
 }
 .contact .item:hover .back {
     transform: rotateY(0deg);
-}
+} */
 .contact .item .contents {
     text-align: center;
     transform: translateZ(100px);
