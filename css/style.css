@@ -6342,7 +6342,7 @@ h6,p,  a,  label, input, button {
   position: relative;
   width: 100%;
   max-width: 800px;
-  height: 450px;
+  height: 550px;
   padding: 0px;
   border-radius: 0.7rem;
   overflow: hidden;
@@ -6359,7 +6359,16 @@ h6,p,  a,  label, input, button {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-size: cover;
+  object-fit: cover;
 }
+.ba-before-image img,
+.ba-after-image img {
+  background-size: cover;
+  object-fit: cover;
+  
+}
+
 
 .ba-before-text,
 .ba-after-text {
@@ -6562,7 +6571,7 @@ h6,p,  a,  label, input, button {
     width: 100%;
     padding: 10px 15px;
     font-size: 14px;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
   }
 
   /* Dropdown menus */
@@ -6677,6 +6686,13 @@ flex: 0 0 auto;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: -20px;
+}
+.banner-header {
+    height: 23vh;
+}
+.banner-header .title {
+    font-size: 17px;
+    font-weight: 700;
 }
 }
 .navbar-toggler {
