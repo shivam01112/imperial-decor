@@ -1193,6 +1193,41 @@ blockquote cite:before {
 
 
 /* ======= Navbar style ======= */
+/* Mobile Toggle Button Styles */
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.navbar-toggler-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(0,0,0,0.9);
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+}
+
 .navbar {
     position: relative;
     left: 0;
@@ -6612,7 +6647,7 @@ h6,p,  a,  label, input, button {
     .nav-scroll .logo-wrapper .logo-img {
     width: 190px;
     text-align: center;
-    padding: 20px 0px;
+    padding: 0px 0px;
 }
 .client-slider-dark .slide {
 flex: 0 0 auto;
