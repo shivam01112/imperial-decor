@@ -52,8 +52,8 @@
         <div class="row">
           <div class="col-md-6">
             <div class="widget mr-30">
-              <a href="tel:+918037402403"
-                ><i class="fa-solid fa-phone"></i>+91 8037402403</a
+              <a href="tel:+918750561111"
+                ><i class="fa-solid fa-phone"></i>+91 8750561111</a
               >
             </div>
             <div class="widget">
@@ -623,7 +623,7 @@
     <section class="facilities2">
       <div class="row mb-25">
         <div class="col-md-12 text-center">
-          <div class="section-subtitle">Our Products</div>
+      
           <div class="section-title">Category</div>
         </div>
       </div>
@@ -974,7 +974,7 @@
       <div class="container-fluid" style="width: 93% !important">
         <div class="row mb-30 align-items-center">
           <div class="col-md-5 text-left">
-            <div class="section-subtitle">Our Projects</div>
+            <div class="section-subtitle"></div>
             <div class="section-title white mb-0">
               Shaping Spaces with Innovation
             </div>
@@ -1067,9 +1067,7 @@
       >
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-4 col-md-12 mb-30">
-            <div class="section-subtitle">
-              Industrial & Infrastructure Projects
-            </div>
+           
             <div class="section-title">Industries We Serve</div>
             <p class="mb-25">
               At IMPERIA DECOR, we cater to diverse industries including real
@@ -2089,7 +2087,8 @@
       <div class="container-fluid" style="width: 91% !important">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-5 col-md-12 mb-30">
-            <div class="section-subtitle">Popular Questions</div>
+         
+            
             <div class="section-title">Frequently Asked Questions</div>
             <p class="mb-25">
               The experience elementum sesue in the miss aucantion alesun in
@@ -2226,7 +2225,7 @@
                 <h3> Contact us</h3>
                 <p style="text-align: start;"><i class="fa-solid fa-location-dot me-2"></i> 109A/111 Ecotech 1 Extention, Greater Noida, Uttar Pradesh 201308</p>
                 <div class="phone">
-                  <a href="tel:8037402403"> <i class="fa-solid fa-phone me-2"></i> +91 8037402403</a>
+                  <a href="tel:8750561111"> <i class="fa-solid fa-phone me-2"></i> +91 8750561111</a>
                 </div>
                 <div class="mail">  <i class="fa-solid fa-envelope me-2"></i>
                   <a href="mailto:info@imperiadecor.com"
@@ -2271,6 +2270,32 @@
         </div>
       </div>
     </footer>
+
+
+<a href="https://wa.me/918750561111" target="_blank" class="whatsapp-btn">
+  <span class="whatsapp-wave"></span>
+  <span class="whatsapp-wave"></span>
+  <img src="images/whatsapp_12635043.png" alt="WhatsApp" />
+</a>
+
+<!-- Enquiry Popup -->
+<div id="enquiryPopup" class="enquiry-popup">
+  <div class="enquiry-content">
+    <span class="enquiry-close">&times;</span>
+    <h2>Send an Enquiry</h2>
+    <form id="enquiryForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+
     <!-- First load jQuery and all plugins -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-migrate-3.4.1.min.js"></script>
@@ -2292,5 +2317,37 @@
     <!-- Finally load custom scripts -->
     <script src="js/custom.js"></script>
     <!-- Removed custom dropdown-submenu script to avoid conflict with jQuery logic in custom.js -->
+     <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById('enquiryPopup');
+  const closeBtn = document.querySelector('.enquiry-close');
+
+  // Show popup after 1 second
+  setTimeout(() => {
+    popup.style.display = 'flex';
+  }, 1000);
+
+  // Close on X click
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  // Close on click outside content
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+
+  // Handle form submission
+  document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Thank you for your enquiry! We will contact you soon.");
+    popup.style.display = 'none';
+    this.reset();
+  });
+});
+</script>
+
   </body>
 </html>
