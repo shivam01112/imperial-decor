@@ -661,3 +661,78 @@ $(function () {
 
 
    
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".ba-slider-container");
+
+  sliders.forEach((sliderContainer) => {
+    const sliderHandle = sliderContainer.querySelector(".ba-slider-handle");
+    const sliderLine = sliderContainer.querySelector(".ba-slider-line");
+    const beforeImage = sliderContainer.querySelector(".ba-before-image");
+    const afterImage = sliderContainer.querySelector(".ba-after-image");
+
+    let isDragging = false;
+
+    const initializeSlider = () => {
+      sliderHandle.style.transition = "left 0.3s ease";
+      sliderLine.style.transition = "left 0.3s ease";
+
+      sliderHandle.style.left = "50%";
+      sliderLine.style.left = "50%";
+
+      beforeImage.style.clipPath = `inset(0 50% 0 0)`;
+      afterImage.style.clipPath = `inset(0 0 0 50%)`;
+    };
+
+    const moveSlider = (clientX) => {
+      const containerRect = sliderContainer.getBoundingClientRect();
+      let offsetX = clientX - containerRect.left;
+
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > containerRect.width) offsetX = containerRect.width;
+
+      const percentage = Math.round((offsetX / containerRect.width) * 100);
+
+      sliderHandle.style.left = `${percentage}%`;
+      sliderLine.style.left = `${percentage}%`;
+
+      beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+      afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+    };
+
+    const startDragging = () => {
+      isDragging = true;
+      sliderHandle.style.transition = "none";
+      sliderLine.style.transition = "none";
+    };
+
+    const stopDragging = () => {
+      isDragging = false;
+      sliderHandle.style.transition = "left 0.3s ease";
+      sliderLine.style.transition = "left 0.3s ease";
+    };
+
+    // Mouse events
+    sliderHandle.addEventListener("mousedown", startDragging);
+    sliderLine.addEventListener("mousedown", startDragging);
+
+    window.addEventListener("mousemove", (event) => {
+      if (isDragging) moveSlider(event.clientX);
+    });
+
+    window.addEventListener("mouseup", stopDragging);
+
+    // Touch events
+    sliderHandle.addEventListener("touchstart", startDragging);
+    sliderLine.addEventListener("touchstart", startDragging);
+
+    window.addEventListener("touchmove", (event) => {
+      if (isDragging) moveSlider(event.touches[0].clientX);
+    });
+
+    window.addEventListener("touchend", stopDragging);
+
+    // Initialize on load
+    initializeSlider();
+  });
+});
+
