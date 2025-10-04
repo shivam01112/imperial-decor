@@ -5744,7 +5744,7 @@ body.mfp-zoom-out-cur {
 .footer .bottom {
     position: relative;
     display: block;
-    padding: 30px 0;
+    padding: 10px 0;
 }
 .footer .bottom p {
     color: rgba(255, 255, 255, 0.6);
@@ -5760,6 +5760,7 @@ body.mfp-zoom-out-cur {
     text-decoration: none;
     transition: background-size .2s;
     line-height: 1.75em;
+    text-decoration: none;
 }
 .footer .bottom p a:hover {
     color: #b98e44;
@@ -6624,6 +6625,9 @@ flex: 0 0 auto;
 }
 .amenities .item .cont.up img {
     width: 65px;
+}
+.amenities .item .cont.up {
+    height: 150px;
 }
 }
 .navbar-toggler {
