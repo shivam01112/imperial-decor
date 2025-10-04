@@ -89,6 +89,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     word-break: break-word;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden !important;
 }
 * {
     margin: 0;
@@ -6571,11 +6572,11 @@ h6,p,  a,  label, input, button {
     }
     .slider-fade .owl-item,
 .slider .owl-item {
-    min-height: calc(50vh - 130px);
+    min-height: calc(40vh - 130px);
     position: relative;
 }
 .header {
-    min-height: calc(50vh - 130px);
+    min-height: calc(40vh - 130px ) !important;
     overflow: hidden;
 }
 .hero-section-text{
@@ -6629,6 +6630,19 @@ flex: 0 0 auto;
 .amenities .item .cont.up {
     height: 150px;
 }
+.bottom-quick-link{
+    padding-left: 0px !important;
+}
+
+.buttom-link{
+    text-align: start !important;
+}
+.rooms1 .item .wrap .cont h3 {
+    font-family: "MyFont", serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: -20px;
+}
 }
 .navbar-toggler {
   border: none; /* optional: remove border */
@@ -6649,4 +6663,12 @@ flex: 0 0 auto;
 }
 .footer .top .item .links {
 text-align: center;
+}
+
+.bottom-quick-link{
+    padding-left: 30px !important;
+}
+
+.buttom-link{
+    text-align: center;
 }
