@@ -5835,7 +5835,7 @@ body.mfp-zoom-out-cur {
 .progress-wrap {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     height: 55px;
     width: 55px;
     cursor: pointer;
@@ -6727,7 +6727,7 @@ text-align: center;
 .whatsapp-btn {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   width: 60px;
   height: 60px;
   z-index: 9999;
