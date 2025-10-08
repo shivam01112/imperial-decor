@@ -1,0 +1,208 @@
+  .amcharts-chart-div > a {
+        display: none !important;
+    }
+    
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .map_container {
+            background: #1b1b1b;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        .vl-blog-1-section-box {
+            margin-bottom: 30px;
+        }
+        
+        .vl-section-title {
+                font-weight: 700;
+    font-size: 32px;
+    line-height: 50px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+        }
+        
+        .heading-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .my-5 {
+            margin: 2rem 0;
+        }
+        
+        .space16 {
+            height: 16px;
+        }
+        
+        #chartdiv {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            background: #FFFFFF;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stats-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .stats-box {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            min-width: 100px;
+        }
+        
+        .stat-number {
+            font-size: 26px;
+            font-weight: bold;
+            color: #FFD700;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #ffffff;
+            margin-top: 5px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        .stats-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+            opacity: 0.9;
+        }
+        
+        .dot-indicator {
+            width: 12px;
+            height: 12px;
+            background: #FFD700;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse-dot 2s infinite;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        
+        @keyframes pulse-dot {
+            0% { 
+                opacity: 1; 
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: scale(1.1);
+                box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+            }
+            100% { 
+                opacity: 1; 
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(17, 27, 105, 0);
+            }
+        }
+        
+        /* Map marker animations */
+        @keyframes map-pulse {
+            0% { 
+                opacity: 1; 
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.7; 
+                transform: scale(1.2);
+            }
+            100% { 
+                opacity: 1; 
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
+            }
+            50% {
+                filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 12px rgba(255, 165, 0, 0.4));
+            }
+            100% {
+                filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
+            }
+        }
+        
+        /* Ensure map markers are visible and animated - but exclude zoom controls */
+        #chartdiv svg g[aria-label] circle {
+            animation: map-pulse 3s ease-in-out infinite !important;
+            filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.8)) !important;
+        }
+        
+        /* Remove animations from zoom control elements */
+        #chartdiv .amcharts-zoom-out circle,
+        #chartdiv .amcharts-zoom-in circle,
+        #chartdiv .amcharts-home circle,
+        #chartdiv .amcharts-pan circle,
+        #chartdiv [class*="zoom"] circle,
+        #chartdiv [class*="home"] circle,
+        #chartdiv [class*="pan"] circle {
+            animation: none !important;
+            filter: none !important;
+        }
+        
+        /* Stagger the animations for different markers */
+        #chartdiv svg g[aria-label]:nth-child(1) circle { animation-delay: 0s !important; }
+        #chartdiv svg g[aria-label]:nth-child(2) circle { animation-delay: 0.2s !important; }
+        #chartdiv svg g[aria-label]:nth-child(3) circle { animation-delay: 0.4s !important; }
+        #chartdiv svg g[aria-label]:nth-child(4) circle { animation-delay: 0.6s !important; }
+        #chartdiv svg g[aria-label]:nth-child(5) circle { animation-delay: 0.8s !important; }
+        #chartdiv svg g[aria-label]:nth-child(6) circle { animation-delay: 1s !important; }
+        
+        .footer-text {
+            white-space: nowrap;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-box {
+                gap: 20px;
+            }
+            
+            .vl-section-title {
+                font-size: 2rem;
+            }
+            
+            #chartdiv {
+                height: 400px !important;
+            }
+        }
