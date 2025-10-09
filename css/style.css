@@ -32,7 +32,7 @@
 }
   .navbar-expand-lg .navbar-nav {
         flex-direction: row;
-        gap: 23px !important;
+        gap: 4px !important;
     }
 /* --- End custom fix --- */
 /* ====================================
@@ -642,8 +642,9 @@ hr {
 .list li {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 10px;
+
 }
 .list li + li {
     margin-top: 10px;
@@ -5101,6 +5102,7 @@ body.mfp-zoom-out-cur {
     margin-bottom: 0px;
     font-weight: 400;
     color: #999;
+    text-align: center;
 }
 .contact .item .btnx {
     border-radius: 30px;
@@ -5637,9 +5639,11 @@ body.mfp-zoom-out-cur {
 }
 /* footer top */
 .footer .top {
-    padding: 100px 0 20px 0;
+    padding: 30px 0 0px 0;
     border: none;
-    border-bottom: 1px solid rgba(255,255,255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #d7b56d33;
+    margin-top: 60px;
 }
 .footer .top .item .logo {
     width: 200px;
@@ -5780,7 +5784,7 @@ body.mfp-zoom-out-cur {
 .footer .bottom {
     position: relative;
     display: block;
-    padding: 10px 0;
+   
 }
 .footer .bottom p {
     color: rgba(255, 255, 255, 0.6);
@@ -5829,7 +5833,6 @@ body.mfp-zoom-out-cur {
         text-align: left !important;
     }
 }
-
 
 /* ======= toTop Button style ======= */
 .progress-wrap {
@@ -6488,6 +6491,14 @@ h6,p,  a,  label, input, button {
 
 @media screen and (max-width: 576px) {
   /* Navbar base */
+  .navbar .navbar-right {
+    position: relative;
+    display: flex;
+    align-items: start;
+}
+  .conatct-links{
+    display: block;
+  }
   .navbar {
     padding: 10px 15px;
   }
@@ -6805,7 +6816,7 @@ p{
   position: relative;
   text-align: center;
   box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3); /* subtle golden glow */
-  border: 2px solid #FFD700; /* golden border */
+  border: 2px solid #d7b56d; /* golden border */
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -6815,7 +6826,7 @@ p{
   top: 12px;
   right: 15px;
   font-size: 26px;
-  color: #FFD700; /* golden close button */
+  color: #d7b56d; /* golden close button */
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -6828,7 +6839,7 @@ p{
 .enquiry-content h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #FFD700;
+  color: #d7b56d;
 }
 
 .enquiry-content input,
@@ -6865,7 +6876,7 @@ p{
 }
 
 .enquiry-content button:hover {
-  background: linear-gradient(135deg, #FFA500, #FFD700);
+  background: linear-gradient(135deg, #FFA500, #d7b56d);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
@@ -6881,7 +6892,7 @@ p{
   background-color: #0d0d0d; /* dark background */
   padding: 60px 20px;
   text-align: center;
-  color: #FFD700; /* golden text */
+  color: #d7b56d; /* golden text */
   position: relative;
 }
 
@@ -6892,7 +6903,7 @@ p{
 
 
 .imperia-video-wrapper {
-  border: 2px solid #FFD700;
+  border: 2px solid #d7b56d;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
@@ -6919,34 +6930,34 @@ p{
 
    .imperia-form-theme {
       background-color: #0d0d0d;
-      color: #FFD700;
-      border: 1px solid #FFD700;
+      color: #d7b56d;
+      border: 1px solid #d7b56d;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
     }
 
     .imperia-form-theme .modal-header {
-      border-bottom: 1px solid #FFD700;
+      border-bottom: 1px solid #d7b56d;
     }
 
     .imperia-form-theme .modal-title {
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #FFD700;
+      color: #d7b56d;
       font-size: 15px;
     }
 
     .imperia-form-theme .form-label {
-      color: #FFD700;
+      color: #d7b56d;
       font-weight: 600;
       font-size: 15px;
     }
 
     .imperia-form-theme .form-control {
           background-color: #1a1a1a;
-    border: 1px solid #FFD700;
-    color: #FFD700;
+    border: 1px solid #d7b56d;
+    color: #d7b56d;
     padding: 10px;
     border-radius: 7px;
     }
@@ -6955,11 +6966,11 @@ p{
       background-color: #111;
       border-color: #FFA500;
       box-shadow: 0 0 6px rgba(255, 165, 0, 0.5);
-      color: #FFD700;
+      color: #d7b56d;
     }
 
     .btn-golden {
-      background-color: #FFD700;
+      background-color: #d7b56d;
       color: #000;
       font-weight: 700;
       border: none;
@@ -6976,3 +6987,26 @@ p{
     .btn-close-golden {
       filter: invert(74%) sepia(85%) saturate(642%) hue-rotate(13deg) brightness(102%) contrast(102%);
     }
+
+
+    .why-us-list li{
+        display: flex;
+        align-items: baseline;
+    }
+
+
+    .conatct-links{
+        display: none;
+    }
+
+      #chartdiv svg path[stroke][fill] {
+    fill: #232323 !important;     
+    stroke: #d7b56d !important;    
+    stroke-width: 1 !important;  
+  }
+
+  /* Optional: hover effect */
+  #chartdiv svg path:hover {
+    fill: #000 !important;      
+    stroke: #ffffff !important; 
+  }

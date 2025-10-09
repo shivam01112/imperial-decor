@@ -523,6 +523,37 @@
             </div>
         </div>
     </footer>
+
+ <div class="modal fade" id="downloadFormModal" tabindex="-1" aria-labelledby="downloadFormLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content imperia-form-theme">
+      <div class="modal-header">
+        <h5 class="modal-title" id="downloadFormLabel">Fill Details to Download</h5>
+        <button type="button" class="btn-close btn-close-golden" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="downloadForm" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+            <div class="mb-3">
+            <label for="name" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" required placeholder="e.g. your@Gmail.com" />
+          </div>
+         
+          <div class="mb-3">
+            <label for="contact" class="form-label">Contact Number</label>
+            <input type="tel" class="form-control" id="contact" placeholder="e.g. +91 9876543210" required />
+          </div>
+          
+        
+          <button type="submit" class="btn btn-golden w-100" style="padding: 17px;">Submit & Download</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-migrate-3.4.1.min.js"></script>
@@ -540,5 +571,40 @@
     <script src="js/select2.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/custom.js"></script>
+ <script>
+    let selectedFile = "";
+    let selectedTitle = "";
+
+    // When any shade card link is clicked → open modal
+    document.querySelectorAll(".download-link").forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        selectedFile = this.dataset.file;
+        selectedTitle = this.dataset.title;
+
+        // Update modal title dynamically
+        document.getElementById("downloadFormLabel").textContent =
+          "Fill Details to Download " + selectedTitle;
+
+        var formModal = new bootstrap.Modal(document.getElementById("downloadFormModal"));
+        formModal.show();
+      });
+    });
+
+    // On form submit → validate and trigger download
+    document.getElementById("downloadForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var formModal = bootstrap.Modal.getInstance(document.getElementById("downloadFormModal"));
+      formModal.hide();
+
+      if (selectedFile) {
+        setTimeout(() => {
+          window.open(selectedFile, "_blank");
+        }, 500);
+      }
+    });
+  </script>
+
 </body>
 </html>

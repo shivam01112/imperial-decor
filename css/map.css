@@ -41,7 +41,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, #FFD700, #FFA500);
+            background: linear-gradient(90deg, #d7b56d, #FFA500);
         }
         
         .text-center {
@@ -84,7 +84,7 @@
         .stat-number {
             font-size: 26px;
             font-weight: bold;
-            color: #FFD700;
+            color: #d7b56d;
             line-height: 1;
         }
         
@@ -110,7 +110,7 @@
         .dot-indicator {
             width: 12px;
             height: 12px;
-            background: #FFD700;
+            background: #d7b56d;
             border-radius: 50%;
             display: inline-block;
             animation: pulse-dot 2s infinite;
