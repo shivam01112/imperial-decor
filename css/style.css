@@ -172,7 +172,7 @@ a,
 a:hover {
     display: inline-block;
     text-decoration: none;
-    color: inherit;
+    color: #eaeaea;
 }
 b {
     font-weight: 700;
@@ -2143,12 +2143,13 @@ position: relative;
     letter-spacing: 3px;
 }
 .banner-header .title {
-    font-size: 28px;
+font-size: 36px;
     line-height: 60px;
     font-family: "MyFont", serif;
     font-weight: 900;
-    color: #ffffffff;
+    color: #edb644;
     position: relative;
+   text-shadow: 1px 1px 2px black !important; 
     margin-bottom: 0;
     text-transform: uppercase;
 }
@@ -6157,7 +6158,7 @@ h6,p,  a,  label, input, button {
 }
 
 .client-card img {
-    max-height: 80px;
+  aspect-ratio: 6/3;
     object-fit: contain;
 }
 
@@ -6691,6 +6692,7 @@ flex: 0 0 auto;
 
 .buttom-link{
     text-align: start !important;
+     padding-left: 0px;
 }
 .rooms1 .item .wrap .cont h3 {
     font-family: "MyFont", serif;
@@ -6732,7 +6734,7 @@ text-align: center;
 }
 
 .buttom-link{
-    text-align: center;
+ padding-left: 40px;
 }
 
 .whatsapp-btn {
@@ -7010,3 +7012,8 @@ p{
     fill: #000 !important;      
     stroke: #ffffff !important; 
   }
+
+  .text-muted {
+    --bs-text-opacity: 1;
+    color: #eeeeee !important;
+}
